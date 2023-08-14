@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const helmet = require("helmet");
 const mongoose = require("mongoose");
+const { logEvents } = require("./middleware/logger");
 
 // CREATE SERVER
 const app = express();
@@ -35,4 +36,8 @@ mongoose.connection.once("open", () => {
 
 mongoose.connection.on("error", (error) => {
   console.log(error);
+  logEvents(
+    `${error.no}: ${error.code}\t${error.syscall}\t${error.hostname}`,
+    "mongoErrLog.log"
+  );
 });
