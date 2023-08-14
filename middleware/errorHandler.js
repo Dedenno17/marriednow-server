@@ -1,7 +1,7 @@
 const { logEvents } = require("./logger");
 
 // ERROR MIDDLEWARE
-export const errorHandler = (error, req, res, next) => {
+const errorHandler = (error, req, res, next) => {
   logEvents(
     `${error.name}: ${error.message}\t${req.method}\t${req.url}\t${req.headers.origin}`,
     "errLog.log"
@@ -12,3 +12,5 @@ export const errorHandler = (error, req, res, next) => {
 
   res.status(status).json({ message: error.message });
 };
+
+module.exports = { errorHandler };
