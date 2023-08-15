@@ -8,6 +8,9 @@ const cookieParser = require("cookie-parser");
 const helmet = require("helmet");
 const mongoose = require("mongoose");
 
+// IMPORT ROUTES
+const authRoutes = require("./routes/authRoutes");
+
 // CREATE SERVER
 const app = express();
 
@@ -26,6 +29,9 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+
+// SET ROUTES
+app.use("/api/auth", authRoutes);
 
 // RUN SERVER
 mongoose.connection.once("open", () => {
