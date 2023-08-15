@@ -10,6 +10,9 @@ const mongoose = require("mongoose");
 const { logEvents, logger } = require("./middleware/logger");
 const { errorHandler } = require("./middleware/errorHandler");
 
+// IMPORT ROUTES
+const authRoutes = require("./routes/authRoutes");
+
 // CREATE SERVER
 const app = express();
 
@@ -30,6 +33,9 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(errorHandler);
+
+// SET ROUTES
+app.use("/api/auth", authRoutes);
 
 // RUN SERVER
 mongoose.connection.once("open", () => {
