@@ -66,4 +66,39 @@ const login = asyncHandler(async (req, res) => {
   res.status(200).json({ accessToken });
 });
 
-module.exports = { login };
+// REGISTER
+const register = asyncHandler(async (req, res) => {
+  const { username, email, password } = req.body;
+
+  if ((!username, !email, !password)) {
+    return res.status(400).json({ message: "All fields are required" });
+  }
+
+  // check duplicate
+  const duplicateUserByUsername = await User.findOne({ username })
+    .lean()
+    .exec();
+  const duplicateUserByEmail = await User.findOne({ email }).lean().exec();
+
+  if (duplicateUserByUsername) {
+    return res.status(409).json({ message: "Username already exist" });
+  }
+  if (duplicateUserByEmail) {
+    return res.status(409).json({ message: "Email already exist" });
+  }
+
+  // hashed password
+  const hashPassword = await bycript.hash(password, 10);
+
+  // create user
+  const objUser = { username, email, password: hashPassword };
+  const user = await User.create(objUser);
+
+  if (user) {
+    return res.status(201).json({ message: "New User successfully created" });
+  } else {
+    return res.status(404).json({ message: "Invalid data received" });
+  }
+});
+
+module.exports = { login, register };
