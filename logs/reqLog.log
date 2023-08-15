@@ -1,3 +1,15 @@
 20230815	09:23:48	809963d8-4d86-4ade-8c21-e719c588e812	POST	/api/auth/register	undefined
 20230815	09:24:54	be3e7415-a463-432a-9015-4fca4db2fa71	GET	/api/auth/login	undefined
 20230815	09:27:34	b4be8ac5-0759-4565-a061-96f74140cc4d	POST	/api/auth/login	undefined
+20230815	19:08:44	2808fcc0-e715-4510-8a89-ad0a3cda3027	OPTIONS	/api/auth/login	http://localhost:3000
+20230815	19:08:44	99a8d270-e67d-4f6f-9315-6999dd1e6388	POST	/api/auth/login	http://localhost:3000
+20230815	19:34:01	a68a467e-3c79-4eaf-b825-2868ddac85b7	OPTIONS	/api/auth/login	http://localhost:3000
+20230815	19:34:01	49cfcc0c-0651-41b2-9202-fae9b9454d5f	POST	/api/auth/login	http://localhost:3000
+20230815	19:35:47	ee8c7911-ccb9-4741-9e92-a1a0862e2880	OPTIONS	/api/auth/login	http://localhost:3000
+20230815	19:35:47	9521ab0d-06f7-45d7-afbb-9bd05197477b	POST	/api/auth/login	http://localhost:3000
+20230815	19:36:35	e50080e1-daf2-4d20-beea-feb33d9654a2	OPTIONS	/api/auth/login	http://localhost:3000
+20230815	19:36:35	17baa9ba-61cb-4785-b1dd-145d4e296f42	POST	/api/auth/login	http://localhost:3000
+20230815	19:39:39	73cc1ee2-b4d2-4ca0-8bf5-53dfe9db53de	OPTIONS	/api/auth/login	http://localhost:3000
+20230815	19:39:39	b48c78bd-2abc-4f0f-898c-684a7659a89d	POST	/api/auth/login	http://localhost:3000
+20230815	20:15:34	0418a97c-ba1c-404e-b753-55a331580a85	POST	/api/auth/login	undefined
+20230815	20:16:48	8e4fa984-8e90-4ae9-b5d8-af5099260340	GET	/api/auth/profile	undefined
