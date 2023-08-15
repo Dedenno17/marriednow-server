@@ -7,6 +7,8 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const helmet = require("helmet");
 const mongoose = require("mongoose");
+const { logEvents, logger } = require("./middleware/logger");
+const { errorHandler } = require("./middleware/errorHandler");
 
 // CREATE SERVER
 const app = express();
@@ -21,11 +23,13 @@ const PORT = process.env.PORT || 5000;
 dbConnect();
 
 // SET UP SERVER
+app.use(logger);
 app.use(express.json());
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+app.use(errorHandler);
 
 // RUN SERVER
 mongoose.connection.once("open", () => {
@@ -35,4 +39,8 @@ mongoose.connection.once("open", () => {
 
 mongoose.connection.on("error", (error) => {
   console.log(error);
+  logEvents(
+    `${error.no}: ${error.code}\t${error.syscall}\t${error.hostname}`,
+    "mongoErrLog.log"
+  );
 });
