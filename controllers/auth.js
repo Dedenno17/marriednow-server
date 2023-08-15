@@ -101,4 +101,19 @@ const register = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { login, register };
+// GET USER DATA BY ACCESS TOKEN
+const getProfileUser = asyncHandler(async (req, res) => {
+  const username = req.user;
+
+  // find user by decoding access token
+  const user = await User.findOne({ username }).select("-password").lean();
+
+  // check if there are no user found
+  if (!user) {
+    return res.status(404).json({ message: "User is not found" });
+  }
+
+  res.status(200).json(user);
+});
+
+module.exports = { login, register, getProfileUser };
