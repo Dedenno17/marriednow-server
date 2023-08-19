@@ -1,0 +1,3 @@
+20230817	13:15:17	00705b6f-9c7d-4d82-a2b2-31cb1c720556	TypeError: Cannot read properties of undefined (reading 'indexOf')	OPTIONS	/api/auth/login	http://localhost:3000
+20230817	13:15:45	1ab84242-712c-41f3-9a3c-c1281c17d395	TypeError: Cannot read properties of undefined (reading 'indexOf')	OPTIONS	/api/auth/login	http://localhost:3000
+20230817	13:16:02	c102c093-3d11-4b0f-83a4-be1be33ede86	TypeError: Cannot read properties of undefined (reading 'indexOf')	OPTIONS	/api/auth/login	http://localhost:3000
