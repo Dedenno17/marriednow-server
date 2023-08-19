@@ -12,6 +12,8 @@ const { errorHandler } = require("./middleware/errorHandler");
 
 // IMPORT ROUTES
 const authRoutes = require("./routes/authRoutes");
+const themeRoutes = require("./routes/themeRoutes");
+const uploadImageRoutes = require("./routes/uploadImageRoutes");
 
 // CREATE SERVER
 const app = express();
@@ -33,9 +35,12 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(errorHandler);
+app.use(express.static("public"));
 
 // SET ROUTES
 app.use("/api/auth", authRoutes);
+app.use("/api/theme", themeRoutes);
+app.use("/api/upload", uploadImageRoutes);
 
 // RUN SERVER
 mongoose.connection.once("open", () => {
