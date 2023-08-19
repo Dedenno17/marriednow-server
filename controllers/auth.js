@@ -116,4 +116,41 @@ const getProfileUser = asyncHandler(async (req, res) => {
   res.status(200).json(user);
 });
 
-module.exports = { login, register, getProfileUser };
+// REFRESH TOKEN
+const refreshToken = asyncHandler(async (req, res) => {
+  const cookies = req.cookies;
+
+  if (!cookies) {
+    return res.status(401).json({ message: "Unauthorize" });
+  }
+
+  // create access token
+  const refreshToken = cookies.mnrt;
+
+  jwt.verify(
+    refreshToken,
+    process.env.REFRESH_TOKEN_SECRET,
+    asyncHandler(async (err, decoded) => {
+      if (err) return res.status(403).json({ message: "Forbidden" });
+
+      const user = await User.findOne({ username: decoded.username });
+
+      if (!user) return res.status(401).json({ message: "Unauthorize" });
+
+      const accessToken = jwt.sign(
+        {
+          UserInfo: {
+            username: user.username,
+            isAdmin: user.isAdmin,
+          },
+        },
+        process.env.ACCESS_TOKEN_SECRET,
+        { expiresIn: "15m" }
+      );
+
+      res.status(200).json({ accessToken });
+    })
+  );
+});
+
+module.exports = { login, register, getProfileUser, refreshToken };
