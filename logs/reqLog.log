@@ -369,3 +369,7 @@
 20230819	09:42:17	14eb9690-9118-42ad-a49a-b8894a999208	GET	/api/auth/profile	http://localhost:3000
 20230819	09:45:16	062807cd-dccf-47ce-a24c-554b38e0abb6	OPTIONS	/api/auth/profile	http://localhost:3000
 20230819	09:45:16	48884808-6c1f-4b5e-b393-aa63f3e867e7	GET	/api/auth/profile	http://localhost:3000
+20230819	15:11:28	1bd83702-9aa3-44b0-a272-aa5235f52f55	OPTIONS	/api/auth/login	http://localhost:3000
+20230819	15:11:28	f718c903-1dd0-4d1c-a4c1-6aad891d5137	POST	/api/auth/login	http://localhost:3000
+20230819	15:11:29	923e4e2e-50fe-4227-a2bb-0ceb2a22ccc8	OPTIONS	/api/auth/profile	http://localhost:3000
+20230819	15:11:29	7b7d958a-c02c-4c79-b622-8e7be923cc34	GET	/api/auth/profile	http://localhost:3000
