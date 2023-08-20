@@ -6,7 +6,7 @@ const { verifyJWT } = require("../middleware/verifyJWT");
 // CREATE ROUTES
 const router = express.Router();
 
-// router.use(verifyJWT);
+router.use(verifyJWT);
 
 // ROUTES
 router.post("/", upload.single("file"), uploadImage);
