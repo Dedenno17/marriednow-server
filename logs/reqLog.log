@@ -400,3 +400,8 @@
 20230820	06:31:45	04925986-7370-4716-b7d8-58f27f0e1f60	GET	/public/images/file_1692487696918.jpg	undefined
 20230820	06:31:50	19076901-b96f-48c9-b8b0-7cb6c5570a41	GET	/images/file_1692487696918.jpg	undefined
 20230820	06:31:50	3a076cca-2525-423f-98c1-5eec775b2934	GET	/favicon.ico	undefined
+20230820	07:00:02	176ac8b1-4320-4213-92e7-08938e646ee7	POST	/api/category	undefined
+20230820	07:00:30	339945f7-e90a-4c75-8ac5-516563137873	POST	/api/category	undefined
+20230820	07:01:09	49d3ddba-16a4-4ed7-902d-3dc19a247de6	POST	/api/category	undefined
+20230820	07:01:55	c162910a-8882-4bb4-a39f-32e2f269f2d0	GET	/api/category	undefined
+20230820	07:02:16	a5bccd87-6953-480e-a023-8c5cf28c4d44	GET	/api/category	undefined
