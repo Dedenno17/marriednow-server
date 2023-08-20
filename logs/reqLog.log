@@ -391,6 +391,15 @@
 20230819	15:58:22	1d2e93f4-78ef-4665-a77c-5cf6a7f5617b	GET	/api/auth/profile	http://localhost:3000
 20230819	16:25:46	325af913-bcc3-4791-9144-85aa566cdd46	OPTIONS	/api/auth/profile	http://localhost:3000
 20230819	16:25:46	4404b16f-ea2d-442c-b07b-7c818fc0aad0	GET	/api/auth/profile	http://localhost:3000
+20230819	20:37:42	b0e15a8f-0b33-4b72-9b64-0e6c9a7e1bba	GET	/api/theme?page=1&limit=10	undefined
+20230820	06:11:12	d18d87ef-9c37-4d93-9f9b-208b1c008122	POST	/api/upload	undefined
+20230820	06:22:16	a462e0e3-0e83-4b7c-b597-954350dcb65c	POST	/api/upload	undefined
+20230820	06:28:16	38d81360-8b03-4bb7-b58b-b7537e1e1b9f	POST	/api/upload	undefined
+20230820	06:28:50	e88646f2-23e9-4e94-bef1-a3e67acf71d0	GET	/images/file_1692487696918.jpg	undefined
+20230820	06:29:01	1633f754-fc47-43c7-bc16-1a58760cf258	GET	/public/images/file_1692487696918.jpg	undefined
+20230820	06:31:45	04925986-7370-4716-b7d8-58f27f0e1f60	GET	/public/images/file_1692487696918.jpg	undefined
+20230820	06:31:50	19076901-b96f-48c9-b8b0-7cb6c5570a41	GET	/images/file_1692487696918.jpg	undefined
+20230820	06:31:50	3a076cca-2525-423f-98c1-5eec775b2934	GET	/favicon.ico	undefined
 20230820	07:00:02	176ac8b1-4320-4213-92e7-08938e646ee7	POST	/api/category	undefined
 20230820	07:00:30	339945f7-e90a-4c75-8ac5-516563137873	POST	/api/category	undefined
 20230820	07:01:09	49d3ddba-16a4-4ed7-902d-3dc19a247de6	POST	/api/category	undefined
