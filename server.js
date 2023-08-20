@@ -12,6 +12,7 @@ const { errorHandler } = require("./middleware/errorHandler");
 
 // IMPORT ROUTES
 const authRoutes = require("./routes/authRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
 
 // CREATE SERVER
 const app = express();
@@ -36,6 +37,7 @@ app.use(errorHandler);
 
 // SET ROUTES
 app.use("/api/auth", authRoutes);
+app.use("/api/category", categoryRoutes);
 
 // RUN SERVER
 mongoose.connection.once("open", () => {
