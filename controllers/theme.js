@@ -46,7 +46,7 @@ const createTheme = asyncHandler(async (req, res) => {
   const theme = await Theme.create(objTheme);
 
   if (theme) {
-    return res.status(201).json({ message: "New User successfully created" });
+    return res.status(201).json({ message: "New Theme successfully created" });
   } else {
     return res.status(404).json({ message: "Invalid data received" });
   }
