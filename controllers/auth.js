@@ -118,14 +118,12 @@ const getProfileUser = asyncHandler(async (req, res) => {
 
 // REFRESH TOKEN
 const refreshToken = asyncHandler(async (req, res) => {
-  const cookies = req.cookies;
+  const refreshToken = req.cookies.mnrt;
 
-  if (!cookies) {
-    return res.status(401).json({ message: "Unauthorize" });
+  if (!refreshToken) {
+    // return res.status(401).json({ message: "Unauthorize" });
+    return;
   }
-
-  // create access token
-  const refreshToken = cookies.mnrt;
 
   jwt.verify(
     refreshToken,

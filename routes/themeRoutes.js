@@ -5,10 +5,8 @@ const { verifyJWT } = require("../middleware/verifyJWT");
 // CREATE ROUTES
 const router = express.Router();
 
-router.use(verifyJWT);
-
 // ROUTES
 router.get("/", getAllTheme);
-router.post("/", createTheme);
+router.post("/", verifyJWT, createTheme);
 
 module.exports = router;
