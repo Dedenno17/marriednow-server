@@ -15,6 +15,7 @@ const authRoutes = require("./routes/authRoutes");
 const themeRoutes = require("./routes/themeRoutes");
 const uploadImageRoutes = require("./routes/uploadImageRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
+const coupleRoutes = require("./routes/coupleRoutes");
 
 // CREATE SERVER
 const app = express();
@@ -43,6 +44,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/theme", themeRoutes);
 app.use("/api/upload", uploadImageRoutes);
 app.use("/api/category", categoryRoutes);
+app.use("/api/couple", coupleRoutes);
 
 // RUN SERVER
 mongoose.connection.once("open", () => {
