@@ -9,6 +9,7 @@ const CoupleSchema = new mongoose.Schema(
       mothers_name: { type: String, required: true, min: 2, max: 10 },
       birth_order: { type: Number, default: null },
       wa_number: { type: String, default: null },
+      instagram_account: { type: String, default: "" },
       photo: { type: String, required: true },
     },
     groom_data: {
@@ -18,6 +19,7 @@ const CoupleSchema = new mongoose.Schema(
       mothers_name: { type: String, required: true, min: 2, max: 10 },
       birth_order: { type: Number, default: null },
       wa_number: { type: String, default: null },
+      instagram_account: { type: String, default: "" },
       photo: { type: String, required: true },
     },
     marriage_settlement_date: { type: String, required: true },
