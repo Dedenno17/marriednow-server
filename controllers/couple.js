@@ -29,7 +29,8 @@ const createCouple = asyncHandler(async (req, res) => {
     marriage_reception_time,
     marriage_reception_location,
     marriage_reception_link_maps,
-    love_gift,
+    love_gift_1,
+    love_gift_2,
     wedding_photo,
   } = req.body;
 
@@ -52,7 +53,7 @@ const createCouple = asyncHandler(async (req, res) => {
     !marriage_reception_time ||
     !marriage_reception_location ||
     !marriage_reception_link_maps ||
-    love_gift.length === 0 ||
+    love_gift_1.length === 0 ||
     wedding_photo.length === 0
   ) {
     return res.status(400).json({ message: "All fields are required" });
@@ -70,7 +71,8 @@ const createCouple = asyncHandler(async (req, res) => {
     marriage_reception_time,
     marriage_reception_location,
     marriage_reception_link_maps,
-    love_gift,
+    love_gift_1,
+    love_gift_2,
     wedding_photo,
   };
 
